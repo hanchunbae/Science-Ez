@@ -3,12 +3,11 @@ using UnityEngine;
 public class Electron : MonoBehaviour
 {
     public float charge = 1f;       // 공의 전하 (양수/음수)
-    public float k = 100f;          // 힘 크기 조절용 상수
+    public float k = 0f;          // 힘 크기 조절용 상수
     public Rigidbody2D rb;
 
     void FixedUpdate()
     {
-        
         Charge[] charges = FindObjectsOfType<Charge>();// 장면에 있는 모든 전하 찾기
 
         Vector2 netForce = Vector2.zero;
@@ -33,5 +32,25 @@ public class Electron : MonoBehaviour
             netForce += force;// 모든 전하가 주는 힘 더하기
         }
         rb.AddForce(netForce);// Rigidbody2D에 힘 적용 → 공이 움직임
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Goal"))
+        {
+            GameEnd();
+        }
+        if (collision.gameObject.CompareTag("DeadZone"))
+        {
+            GameEnd();
+        }
+    }
+
+    public void GameStart()
+    {
+        k = 300f;
+    }
+    public void GameEnd()
+    {
+        Time.timeScale = 0f;
     }
 }

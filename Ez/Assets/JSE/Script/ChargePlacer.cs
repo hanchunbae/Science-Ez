@@ -45,8 +45,14 @@ public class ChargePlacer : MonoBehaviour
 
     private void PlaceCharge(Vector3 pos)
     {
+        // 실제 오브젝트 생성
         GameObject placed = Instantiate(prefabToPlace, pos, Quaternion.identity);
-        SetPreviewMode(placed, false); // 실제 배치
+        SetPreviewMode(placed, false); // 프리뷰 모드 해제 → 실제 오브젝트
+
+        // 프리뷰 제거
+        Destroy(preview);
+        preview = null;
+        prefabToPlace = null;
     }
 
     private void CancelPlacement()
