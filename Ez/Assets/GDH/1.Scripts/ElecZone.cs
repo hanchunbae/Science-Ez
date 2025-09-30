@@ -12,7 +12,7 @@ public class ElecZone : MonoBehaviour
 
     private void Update()
     {
-        _givePower = (_culong.RbCompo.linearVelocity.y * _power)
+        _givePower = (_culong.CulongPower * _power)
             / Mathf.Pow((_culong.gameObject.transform.position.y - gameObject.transform.position.y), 2);
         _culong.RbCompo.AddForce(Vector2.down * Mathf.Abs(_givePower));
     }
