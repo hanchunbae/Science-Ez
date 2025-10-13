@@ -7,7 +7,7 @@ public class ElecZone : MonoBehaviour
     private float _givePower;
     private void Awake()
     {
-        _culong = GameObject.Find("C").GetComponent<Culong>();
+        _culong = GameObject.Find("Electron").GetComponent<Culong>();
     }
 
     private void Update()
