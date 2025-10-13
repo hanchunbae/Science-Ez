@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Electron : MonoBehaviour
@@ -5,6 +6,8 @@ public class Electron : MonoBehaviour
     public float charge = 1f;       // 공의 전하 (양수/음수)
     public float k = 0f;          // 힘 크기 조절용 상수
     public Rigidbody2D rb;
+
+    public GameObject reset;
 
     void FixedUpdate()
     {
@@ -48,9 +51,31 @@ public class Electron : MonoBehaviour
     public void GameStart()
     {
         k = 300f;
+        Time.timeScale = 1f;
+        reset.SetActive(false);
     }
     public void GameEnd()
     {
         Time.timeScale = 0f;
+        Debug.Log("게임 끝 UI");
+        GameRestart();
+        
+    }
+    public void GameRestart()
+    {
+        Reset();
+        k = 0;
+        Time.timeScale = 0f;
+        transform.position = Vector3.zero;
+        reset.SetActive(true);
+    }
+    public void Reset()
+    {
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("charges");
+
+        foreach (GameObject obj in objects)
+        {
+            Destroy(obj);
+        }
     }
 }
