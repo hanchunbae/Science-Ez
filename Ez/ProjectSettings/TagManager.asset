@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Goal
   - DeadZone
+  - charges
   layers:
   - Default
   - TransparentFX
