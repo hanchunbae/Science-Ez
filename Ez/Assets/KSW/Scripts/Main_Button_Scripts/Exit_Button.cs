@@ -4,11 +4,16 @@ public class Exit_Button : MonoBehaviour
 {
     public void ExitGame()
     {
+<<<<<<< Updated upstream
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
         Application.Quit(); // 어플리케이션 종료
 #endif
         Debug.LogError("게임 종료");
+=======
+        Application.Quit();
+        Debug.Log("Game is exiting...");
+>>>>>>> Stashed changes
     }
 }

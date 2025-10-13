@@ -6,7 +6,7 @@ public class Start_Button : MonoBehaviour
 {
     public void StartGameScene()
     { 
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Stage_Choose");
         Debug.Log("Start Game Button Clicked");
     }
 }
