@@ -69,6 +69,10 @@ public class Electron : MonoBehaviour
         transform.position = Vector3.zero;
         reset.SetActive(true);
     }
+    public void GameClear()
+    {
+        Debug.Log("게임 클리어");
+    }
     public void Reset()
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag("charges");
