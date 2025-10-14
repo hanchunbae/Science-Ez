@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Base/Ksw_Scene/Stage_Choose.unity
     guid: 61080b975864e8240b67f999fc44b4ec
   - enabled: 1
-    path: Assets/GDH/Scenes/Stage1.unity
+    path: Assets/Base/Gdh_Scene/Stage1.unity
     guid: de1b85772caa01c43b471d79edbc6a62
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
