@@ -6,7 +6,7 @@ public class Obstacle : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent<Electron>(out Electron culong))
         {
-            culong.gameObject.SetActive(false);
+            culong.GameEnd();
         }
     }
 }

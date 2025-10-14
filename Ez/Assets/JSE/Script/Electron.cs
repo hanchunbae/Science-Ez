@@ -8,6 +8,7 @@ public class Electron : MonoBehaviour
     public Rigidbody2D rb;
 
     public GameObject reset;
+    [SerializeField] private GameObject _clearScreen;
 
     void FixedUpdate()
     {
@@ -40,7 +41,7 @@ public class Electron : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Goal"))
         {
-            GameEnd();
+            GameClear();
         }
         if (collision.gameObject.CompareTag("DeadZone"))
         {
@@ -66,11 +67,13 @@ public class Electron : MonoBehaviour
         k = 0;
         Time.timeScale = 0f;
         transform.position = Vector3.zero;
+        rb.linearVelocity = Vector3.zero;
         reset.SetActive(true);
     }
     public void GameClear()
     {
-        Debug.Log("게임 클리어");
+        Time.timeScale = 0f;
+        _clearScreen.SetActive(true);
     }
     public void Reset()
     {
