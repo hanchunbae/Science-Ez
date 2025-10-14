@@ -67,6 +67,7 @@ public class Electron : MonoBehaviour
         k = 0;
         Time.timeScale = 0f;
         transform.position = Vector3.zero;
+        gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
         rb.linearVelocity = Vector3.zero;
         reset.SetActive(true);
     }
