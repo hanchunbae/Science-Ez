@@ -5,6 +5,6 @@ public class Choose_Stage : MonoBehaviour
 {
     public void StageChoose()
     { 
-        SceneManager.LoadScene("Stage_Select");
+        SceneManager.LoadScene("Stage_Choose");
     }
 }
