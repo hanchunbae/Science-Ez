@@ -17,6 +17,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Base/Gdh_Scene/Stage1.unity
     guid: de1b85772caa01c43b471d79edbc6a62
+  - enabled: 1
+    path: Assets/Base/Gdh_Scene/Stage2.unity
+    guid: c86abe5e8eccf6344a8c6651a70ec781
+  - enabled: 1
+    path: Assets/Base/Gdh_Scene/Stage3.unity
+    guid: 12d918035c9a18640b971174d72a5b9b
+  - enabled: 1
+    path: Assets/Base/Gdh_Scene/Stage4.unity
+    guid: 521aab1f766ede149a51d41f875e102e
+  - enabled: 1
+    path: Assets/Base/Gdh_Scene/Stage5.unity
+    guid: 86f8bab3a805ddd439bddda262832115
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
