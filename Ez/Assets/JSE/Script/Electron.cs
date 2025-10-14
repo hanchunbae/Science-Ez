@@ -59,7 +59,6 @@ public class Electron : MonoBehaviour
         Time.timeScale = 0f;
         Debug.Log("∞‘¿” ≥° UI");
         GameRestart();
-        
     }
     public void GameRestart()
     {
